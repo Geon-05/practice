@@ -6,6 +6,6 @@ import org.apache.ibatis.annotations.Select;
 @Mapper
 public interface BookMapper {
 
-    @Select("select sysdate from dual")
+    @Select("select to_char(sysdate, 'yyyy-mm-dd') from dual")
     String selectDate();
 }
