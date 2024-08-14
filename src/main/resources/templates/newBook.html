@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>도서세부정보</title>
+  </head>
+  <body>
+    <h1>도서세부정보</h1>
+    <h2>도서명</h2>
+    <p th:text="${book.title}"></p>
+    <h2>도서번호</h2>
+    <p th:text="${book.book_no}"></p>
+    <h2>작가명</h2>
+    <p th:text="${book.author}"></p>
+    <h2>가격</h2>
+    <p th:text="${book.price}"></p>
+    <h2>출판사번호</h2>
+    <p th:text="${book.pub_no}"></p>
+    <h2>대여여부</h2>
+    <p th:text="${book.rentyn}"></p>
+    <h2>삭제여부</h2>
+    <p th:text="${book.delyn}"></p>
+    <h2>등록일자</h2>
+    <p th:text="${book.regdate}"></p>
+
+    <a href="/newBookList">목록으로 이동</a>
+  </body>
+</html>
