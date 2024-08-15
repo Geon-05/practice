@@ -1,5 +1,7 @@
 package com.example.practice.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -61,5 +63,14 @@ public class BookController {
             model.addAttribute("book", book);
         return "newBook";
     }
+
+    @GetMapping("/newBookList")
+    public String getMethodName(Model model) {
+        log.info("newBookList - Calling");
+        List<BookDto> list = service.selectBookList();
+        model.addAttribute("list", list);
+        return "newBookList";
+    }
+    
 
 }

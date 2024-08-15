@@ -2,6 +2,8 @@ package com.example.practice.mapper;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -23,5 +25,11 @@ public class BookMapperTest {
     void testSelectBook() {
         BookDto book = mapper.selectBook("B00001");
         assertNotNull(book);
+    }
+
+    @Test
+    void testSelectBookList() {
+        List<BookDto> list = mapper.selectBookList();
+        assertNotNull(list);
     }
 }

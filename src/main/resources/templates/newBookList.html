@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>도서목록</h1>
+    <th:block th:each="book, status:${list}">
+        <a th:href="@{/book(b_no=${book.book_no})}">상세페이지</a>
+        <span th:text="${book.book_no}">도서번호</span>
+        <span th:text="${book.title}">도서명</span>
+        <span th:text="${book.author}">작가명</span>
+        <br>
+    </th:block> 
+    <a href="/">홈으로</a>
+</body>
+</html>
