@@ -35,6 +35,9 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	implementation 'com.oracle.database.jdbc:ojdbc8:23.5.0.24.07'
 	implementation 'com.oracle.ojdbc:orai18n:19.3.0.0'
+	// 쿼리 문장 및 쿼리의 실행결과를 출력 하기 위해 라이브러리를 추가
+	// https://mvnrepository.com/artifact/org.bgee.log4jdbc-log4j2/log4jdbc-log4j2-jdbc4.1
+	implementation group: 'org.bgee.log4jdbc-log4j2', name: 'log4jdbc-log4j2-jdbc4.1', version: '1.16'
 }
 
 tasks.named('test') {
